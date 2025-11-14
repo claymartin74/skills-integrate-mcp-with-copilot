@@ -130,6 +130,25 @@ section h3 {
   font-style: italic;
 }
 
+.card-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.register-btn {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background-color: #388e3c;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
