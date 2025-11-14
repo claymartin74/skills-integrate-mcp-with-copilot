@@ -115,8 +115,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const activity = button.getAttribute("data-activity");
     const email = window.prompt("Enter student email to register:", "");
 
-    if (!email) return;
+    if (!email || !email.trim()) return;
 
+    // Basic email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      messageDiv.textContent = "Please enter a valid email address";
+      messageDiv.className = "error";
+      messageDiv.classList.remove("hidden");
+      return;
+    }
     try {
       const response = await fetch(
         `/activities/${encodeURIComponent(activity)}/signup?email=${encodeURIComponent(
