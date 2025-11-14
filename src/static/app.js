@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ${participantsHTML}
           </div>
           <div class="card-actions">
-            <button class="register-btn" data-activity="${name}">Register Student</button>
+            <button class="register-btn" data-activity="${name}" aria-label="Register student for ${name}">Register Student</button>
           </div>
         `;
 
